@@ -1,0 +1,6 @@
+[
+    {"name": "Address", "bits": 12, "attr": "RO" ,"type":1},
+    {"name": "Data", "bits": 8, "attr": "RW","type": 2},
+    {"name": "Control", "bits": 4, "attr": "WO", "type":3},
+    {"bits": 8}
+]

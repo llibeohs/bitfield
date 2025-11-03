@@ -1,0 +1,12 @@
+{
+  "reg": [
+    {"name": "addr", "bits": 8, "type": 2},
+    {"name": "data", "bits": 16, "type": 4},
+    {"name": "control", "bits": 4, "type": 6},
+    {"name": "status", "bits": 4, "type": 7}
+  ],
+  "config": {
+    "type_colors": ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff", "#ffa500", "#800080"],
+    "hspace": 800
+  }
+}

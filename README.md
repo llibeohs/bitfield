@@ -33,6 +33,7 @@ const html = onml.stringify(jsonml);
 
 ```sh
 npx bit-field [options] > alpha.svg
+
 ```
 
 ### options
@@ -48,6 +49,8 @@ Options:
       --fontsize    font size                             [number] [default: 14]
       --fontfamily  font family                          [default: "sans-serif"]
       --fontweight  font weight                              [default: "normal"]
+      --stroke      stroke color                             [default: "black"]
+      --fill        font fill color                          [default: "black"]
       --compact     compact format                    [boolean] [default: false]
       --hflip       horizontal flip                   [boolean] [default: false]
       --vflip       vertical flip                     [boolean] [default: false]
@@ -75,3 +78,13 @@ Options:
 ## Online Examples
 
 https://observablehq.com/collection/@drom/bitfield
+
+## 测试新功能
+
+```bash
+# 这个测试 , json 里只能是 []  ,就是reg的部分, config 的部分 在命令行参数里传递
+# --type_colors ,数组似乎 只能--type_colors green --type_colors yellow --type_colors blue 这样多个传递, 其他方式 不行,可能是mac 系统问题
+# --type_colors '[a,b,c]'
+# --type_colors a,b,c
+node bin/bitfield.js --input test/stroke-fill-test.json --stroke red --fill blue --mode dark --opacity 0.9 --type_colors green --type_colors yellow --type_colors blue > test/stroke-fill-test.svg
+```

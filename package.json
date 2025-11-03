@@ -9,6 +9,8 @@
   "scripts": {
     "test": "eslint lib/*.js && nyc -r=lcov -r=text mocha test",
     "alpha": "node bin/bitfield.js --input test/alpha.json --hspace 800 > test/alpha.svg",
+    "dark-mode-test": "node bin/bitfield.js --input test/dark-mode-config.json --hspace 800 > test/dark-mode-config.svg",
+    "custom-colors-test": "node bin/bitfield.js --input test/custom-type-colors.json --hspace 800 > test/custom-type-colors.svg",
     "browserify": "browserify --standalone bitfield lib/index.js > build/bitfield.js",
     "prepublish": "npm run test && mkdir -p build && npm run browserify"
   },
